@@ -143,3 +143,27 @@ if api_key:
 
 else:
     st.warning("Please enter the Groq API Key")
+
+
+st.markdown(
+    """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        color: #555;
+    }
+    </style>
+    <div class="footer">
+        <p>All rights reserved &copy; Niraj Kumar 2024</p> 
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
