@@ -155,7 +155,7 @@ st.markdown(
         width: 100%;
         background-color: #f1f1f1;
         text-align: center;
-        padding: 5px;
+        padding: 2px;
         font-size: 12px;
         color: #555;
     }
