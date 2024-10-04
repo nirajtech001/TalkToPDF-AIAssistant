@@ -153,10 +153,10 @@ st.markdown(
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #A9A9A9;
+        background-color: #000000;;
         text-align: center;
         font-size: 12px;
-        color: #555;
+        color: #FFFFFF;
     }
     </style>
     <div class="footer">
