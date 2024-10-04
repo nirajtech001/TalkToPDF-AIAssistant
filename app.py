@@ -19,6 +19,11 @@ load_dotenv()
 os.environ['HF_TOKEN'] = os.getenv("HF_TOKEN")
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
+## Langsmith Tracking
+os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
+os.environ["LANGCHAIN_TRACING_V2"]="true"
+os.environ["LANGCHAIN_PROJECT"]=os.getenv("LANGCHAIN_PROJECT")
+
 # Initialize Streamlit app
 st.title("TalkToPDF : AI Assistant")
 st.write("### Generative AI-based RAG (Retrieval-Augmented Generation) with PDF Uploads and Chat History")

@@ -1,5 +1,6 @@
 streamlit
 langchain
+python-dotenv
 faiss-cpu
 langchain_community
 langchain_core
@@ -9,3 +10,4 @@ langchain_groq
 huggingface-hub
 python-dotenv
 pypdf
+
