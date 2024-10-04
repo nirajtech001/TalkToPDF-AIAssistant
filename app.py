@@ -21,7 +21,7 @@ embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 # Initialize Streamlit app
 st.title("TalkToPDF : AI Assistant")
-st.write("## Generative AI-based RAG (Retrieval-Augmented Generation) with PDF Uploads and Chat History")
+st.write("### Generative AI-based RAG (Retrieval-Augmented Generation) with PDF Uploads and Chat History")
 st.write("By using RAG technology. It employs Gemma2-9b-It for LLM capabilities, all-MiniLM-L6-v2 for document embeddings, and FAISS Database for PDF vector storage, Upload PDFs and chat with their content")
 
 # Track number of questions processed using your API key
