@@ -15,14 +15,23 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+# # Load Hugging Face embeddings
+# os.environ['HF_TOKEN'] = os.getenv("HF_TOKEN")
+# embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
+# ## Langsmith Tracking
+# os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
+# os.environ["LANGCHAIN_TRACING_V2"]="true"
+# os.environ["LANGCHAIN_PROJECT"]=os.getenv("LANGCHAIN_PROJECT")
+
 # Load Hugging Face embeddings
-os.environ['HF_TOKEN'] = os.getenv("HF_TOKEN")
+os.environ['HF_TOKEN'] = st.secrets["HF_TOKEN"]
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-## Langsmith Tracking
-os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
-os.environ["LANGCHAIN_TRACING_V2"]="true"
-os.environ["LANGCHAIN_PROJECT"]=os.getenv("LANGCHAIN_PROJECT")
+# Langsmith Tracking
+os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGCHAIN_API_KEY"]
+os.environ["LANGCHAIN_TRACING_V2"] = st.secrets["LANGCHAIN_TRACING_V2"]
+os.environ["LANGCHAIN_PROJECT"] = st.secrets["LANGCHAIN_PROJECT"]
 
 # Initialize Streamlit app
 st.title("TalkToPDF : AI Assistant")
@@ -34,7 +43,9 @@ if 'question_count' not in st.session_state:
     st.session_state.question_count = 0
 
 # Your Groq API key
-your_api_key = os.getenv('GROQ_API_KEY')
+# your_api_key = os.getenv('GROQ_API_KEY')
+your_api_key = st.secrets["GROQ_API_KEY"]
+
 
 # Ask user for their API key after 3 questions
 if st.session_state.question_count < 3:
